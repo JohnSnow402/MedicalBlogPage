@@ -1,0 +1,1133 @@
+{% load static %}
+
+<!doctype html>
+
+
+<html lang="en-gb" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <title>Dr.Asif Cahangirov</title>
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+    <!--styles -->
+    <link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/font-awesome.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="{% static 'assets/js/owl-carousel/owl.carousel.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/js/owl-carousel/owl.theme.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/js/owl-carousel/owl.transitions.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/magnific-popup.css' %}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/animate.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/etlinefont.css' %}">
+    <link href="{% static 'assets/css/main-style.css' %}" rel="stylesheet" />
+
+
+    <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+        <![endif]-->
+</head>
+<body data-spy="scroll" data-target="#main-menu">
+
+
+    <!--Start Page loader -->
+    <div id="pageloader">
+        <div class="loader">
+            <img src="{% static 'assets/images/progress.gif' %}" alt='loader' />
+        </div>
+    </div>
+    <!--End Page loader -->
+
+
+    <!--Start Navigation-->
+    <header id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#main-menu">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="fa fa-bars"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!--Start Logo -->
+                    <div class="logo-nav">
+                        <a href="index.html">
+                            <img src="#" alt="Company logo" />
+                        </a>
+                    </div>
+                    <!--End Logo -->
+                    <div class="clear-toggle"></div>
+                    <div id="main-menu" class="collapse scroll navbar-right">
+                        <ul class="nav">
+
+                            <li class="active"> <a href="#home">Home</a> </li>
+
+                            <li> <a href="#about">About</a> </li>
+
+                            <li> <a href="#works">Our Work</a> </li>
+
+                            <li> <a href="#services">Services</a> </li>
+
+                            <li> <a href="#blog">Blog</a></li>
+
+                            <li> <a href="#contact">Contact</a> </li>
+                            {% if user.is_authenticated %}
+                            <li> <a href="logout">Logout</a> </li>
+                            {% else %}
+                            <li> <a href="login">Sign Up</a> </li>
+                            {% endif %}
+
+                        </ul>
+                    </div><!-- end main-menu -->
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--End Navigation-->
+
+
+    <!-- Start Slider  -->
+    <section id="home" class="home">
+        <div class="slider-overlay"></div>
+        <div class="flexslider">
+            <ul class="slides scroll">
+                <li class="first">
+                    <div class="slider-text-wrapper">
+                        <div class="container">
+                            <div class="big">Dr.Asif Cahangirov </div>
+                            <div class="small">Urologiya və Andrologiya uzmanı Op.Dr. Asif Cahangirov</div>
+                            <a href="#about" class="middle btn btn-white">ABOUT ME</a>
+                        </div>
+                    </div>
+                    <img src="{% static 'assets/images/slider/foto.jpg' %}" alt="" class="parallax">
+                </li>
+
+                <li class="secondary">
+                    <div class="slider-text-wrapper">
+                        <div class="container">
+                            <div class="big">Dr.Asif Cahangirov </div>
+                            <div class="small">Urologiya və Andrologiya uzmanı Op.Dr. Asif Cahangirov</div>
+                            <a href="#works" class=" middle btn btn-white">VIEW PORTFOLIO</a>
+                        </div>
+                    </div>
+                    <img src="{% static 'assets/images/slider/foto.jpg' %}" alt="" class="parallax">
+                </li>
+
+                <li class="third">
+                    <div class="slider-text-wrapper">
+                        <div class="container">
+                            <div class="big">Dr.Asif Cahangirov </div>
+                            <div class="small">Urologiya və Andrologiya uzmanı Op.Dr. Asif Cahangirov</div>
+                            <a href="#services" class="middle btn btn-white">VIEW SERVICES</a>
+                        </div>
+                    </div>
+                    <img src="{% static 'assets/images/slider/foto.jpg' %}" alt="" class="parallax">
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- End Slider  -->
+
+    <!--Start Section-->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="content-tab-1">
+                        <ul class="nav">
+                            <li>
+                                <a aria-expanded="true" href="#tab-content-2" data-toggle="tab">
+
+                                    <i class="fas fa-university"></i>
+                                    <h4>Tehsili</h4>
+                                </a>
+                                <div class="tab-arrow">
+                                </div>
+                            </li>
+                            <li class="active">
+                                <a aria-expanded="true" href="#tab-content-1" data-toggle="tab">
+                                    <i class="fa fa-desktop"></i>
+                                    <h4>Kurslar</h4>
+                                </a>
+                                <div class="tab-arrow">
+                                </div>
+                            </li>
+
+
+
+                            <li>
+                                <a aria-expanded="true" href="#tab-content-3" data-toggle="tab">
+                                    <i class="fa fa-cubes"></i>
+                                    <h4>Konfranslar</h4>
+                                </a>
+                                <div class="tab-arrow">
+                                </div>
+                            </li>
+
+
+
+                        </ul>
+
+                        <div class="tab-content-main">
+                            <div class="container">
+                                <div class="tab-content">
+                                    <div class="tab-pane active in" id="tab-content-1">
+
+                                        <!-- Features Icon-->
+                                        <div class="col-md-6 margin-bottom-30">
+                                            <div class="tab1-features">
+                                                <div class="icon"> <i class="fas fa-star"></i> </div>
+                                                <div class="info">
+
+                                                    <h4>– Retrograd İntrarenal Cərrahiyyə kursu – Paris , Tenon
+                                                        Hospital, Fransa </h4>
+                                                </div>
+                                            </div>
+
+                                            <div class="tab1-features">
+                                                <div class="icon"> <i class="fas fa-star"></i> </div>
+                                                <div class="info">
+
+                                                    <h4>- İləri Laparoskopik Urologiya Kursu – Strasburg Universiteti,
+                                                        Fransa </h4>
+                                                </div>
+                                            </div>
+
+                                            <div class="tab1-features">
+                                                <div class="icon"> <i class="fas fa-star"></i> </div>
+                                                <div class="info">
+
+                                                    <h4>- Uşaqlarda sidik qaçırma və çanaq reabilitasiya kursu – Ankara,
+                                                        Türkiyə </h4>
+                                                </div>
+                                            </div>
+
+                                            <div class="tab1-features">
+                                                <div class="icon"> <i class="fas fa-star"></i> </div>
+                                                <div class="info">
+
+                                                    <h4>- Avropa Urologlar Assosiyasiyası </h4>
+                                                </div>
+                                            </div>
+                                            <div class="tab1-features">
+                                                <div class="icon"> <i class="fas fa-star"></i> </div>
+                                                <div class="info">
+
+                                                    <h4>- Türkiyə Uroloji Cərrahiyyə Dərnəği </h4>
+                                                </div>
+                                            </div>
+                                            <div class="tab1-features">
+                                                <div class="icon"> <i class="fas fa-star"></i> </div>
+                                                <div class="info">
+
+                                                    <h4>- Azərbaycan Andrologiya və Reproduktiv Təbabət
+
+                                                        Assosiyasiyası </h4>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                        <!--End features Icon-->
+
+
+                                        <!--  Start Carousel-->
+                                        <div class="col-md-6">
+                                            <div class="tab-carousel">
+                                                <div class="item"><img src="{% static 'assets/images/works/kurs.jpg' %}"
+                                                        alt=""></div>
+                                                <div class="item"><img src="{% static 'assets/images/works/kurs2.jpg' %}"
+                                                        alt=""></div>
+                                                <div class="item"><img src="{% static 'assets/images/works/kurs3.jpg' %}"
+                                                        alt=""></div>
+                                                <div class="item"><img src="{% static 'assets/images/works/konfrans.jpg' %}"
+                                                        alt=""></div>
+                                            </div>
+                                        </div>
+                                        <!-- End Carousel-->
+
+                                    </div>
+                                    <!-- End Tab content 1-->
+
+
+                                    <!-- Start Tab content 2-->
+                                    <div class="tab-pane" id="tab-content-2">
+
+                                        <div class="col-md-4">
+                                            <div class="tab2-services-box">
+                                                <div class="media">
+                                                    <img src="{% static 'assets/images/works/uzmanliq.jpg' %}"
+                                                        alt="services" />
+                                                </div>
+
+                                                <div class="services-info">
+
+                                                    <h4>Tehsili</h4>
+                                                    <p>Tibb doktoru – Azərbaycan Tibb Universiteti – 1993-2000 </p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <div class="tab2-services-box">
+                                                
+
+                                                <div class="services-info">
+                                                    <h4>Uzmanlıq</h4>
+                                                    <p>2002-2009-cu illər arasında Türkiyənin İzmir şəhərində 9 Eyül
+                                                        Universitetinin Tibb fakültəsinin Urologiya kafedrasında
+                                                        uzmanlıq təhsili alıb. </p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+
+
+                                    <div class="tab-pane" id="tab-content-3">
+
+                                        <div class="features-tab3">
+
+                                            <!--Start Features Left-->
+                                            <div class="col-md-4">
+                                                <div class="features-left m-bot-30">
+                                                    <!--Features Item #1-->
+                                                    <div class="features-item">
+                                                        <div class="features-icon"> <i class="fab fa-pagelines"></i>
+                                                        </div>
+                                                        <div class="features-info">
+                                                            <h4>Amerika Urologlar Assosiyasiyası illik konfransları
+                                                                (AUA)</h4>
+
+                                                        </div>
+                                                    </div>
+
+                                                    <!--Features Item #2-->
+                                                    <div class="features-item">
+                                                        <div class="features-icon"> <i class="fa fa-trophy"></i> </div>
+                                                        <div class="features-info">
+                                                            <h4>Avropa Urologlar Assosiyasiyası illik konfransları (EAU)
+                                                            </h4>
+
+                                                        </div>
+                                                    </div>
+
+
+
+                                                </div>
+                                            </div>
+                                            <!--End Features Left-->
+
+                                            <!--Start Features Image-->
+                                            <div class="col-md-4 hidden-xs m-bot-30">
+                                                <img src="{% static 'assets/images/device-desktop.png' %}"
+                                                    alt="Features Image" />
+                                            </div>
+                                            <!--End Features Image-->
+
+                                            <!--Start Features Right-->
+                                            <div class="col-md-4">
+                                                <div class="features-right m-bot-30">
+                                                    <!--Features Item #1-->
+                                                    <div class="features-item">
+                                                        <div class="features-icon"> <i class="fas fa-eye-dropper"></i>
+                                                        </div>
+                                                        <div class="features-info">
+                                                            <h4>Türkiyə Uroloji Cərrahiyyə Dərnəği illik konfransları
+                                                                (ÜCD)</h4>
+
+                                                        </div>
+                                                    </div>
+
+                                                    <!--Features Item #2-->
+                                                    <div class="features-item">
+                                                        <div class="features-icon"> <i class="fa fa-search-plus"></i>
+                                                        </div>
+                                                        <div class="features-info">
+                                                            <h4>Dünya Uroloji Dərnəği konfransları</h4>
+
+                                                        </div>
+                                                    </div>
+
+
+
+                                                </div>
+                                            </div>
+                                            <!--End Features Right -->
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!--/.tab-content-main-->
+                    </div>
+                </div>
+
+            </div>
+            <!--/.row-->
+        </div>
+        <!--/.container-->
+    </section>
+    <!--End Section-->
+
+
+    <!--Start portfolio-->
+    <section id="works" class="section">
+        <!-- Filtering -->
+        <div class="title-box text-center">
+            <h2 class="title">Our Work</h2>
+        </div>
+
+
+        <div class=" col-md-12 text-center">
+            <!-- Filtering -->
+            <ul class="filtering">
+                <li class="filter" data-filter="all">All</li>
+                <li class="filter" data-filter="fashion">Fashion</li>
+                <li class="filter" data-filter="event">Events</li>
+                <li class="filter" data-filter="wedding">Wedding</li>
+                <li class="filter" data-filter="corporate">Corporate</li>
+            </ul>
+        </div>
+
+        <div class="work-main">
+            <!-- Work Grid -->
+            <ul class="work-grid">
+                <!-- Work Item -->
+                <li class="work-item thumnail-img mix corporate">
+                    <div class="work-image">
+                        <img src="{% static 'assets/images/works/img1.jpg' %}" alt="thumbnail">
+                        <!--Hover link-->  
+                        <div class="hover-link">
+                            <a href="{% static 'assets/images/works/img1.jpg' %}" class="popup-image">
+                                <i class="fa fa-plus"></i>
+                            </a>
+                        </div>
+                        <!--End link-->
+
+                        <!--Hover Caption-->
+                        <div class="work-caption">
+                            <h4>Project Title</h4>
+                            <p>Photography</p>
+                        </div>
+                        <!--End Caption-->
+
+                    </div> <!-- /.work-image-->
+                </li>
+                <!--End Work Item -->
+
+                <!-- Work Item -->
+                <li class="work-item thumnail-img mix fashion wedding">
+                    <div class="work-image">
+                        <img src="{% static 'assets/images/works/img2.jpg' %}" alt="thumbnail">
+
+                        <!--Hover link-->
+                        <div class="hover-link">
+                            <a href="single-work.html">
+                                <i class="fa fa-link"></i>
+                            </a>
+
+                            <a href="{% static 'assets/images/works/img2.jpg' %}" class="popup-image">
+                                <i class="fa fa-plus"></i>
+                            </a>
+                        </div>
+                        <!--End link-->
+
+                        <!--Hover Caption-->
+                        <div class="work-caption">
+                            <h4>Project Title</h4>
+                            <p>Photography</p>
+                        </div>
+                        <!--End Caption-->
+
+                    </div> <!-- /.work-image-->
+                </li>
+                <!--End Work Item -->
+
+                <!-- Work Item -->
+                <li class="work-item thumnail-img mix corporate">
+                    <div class="work-image">
+                        <img src="{% static 'assets/images/works/img1.jpg' %}" alt="thumbnail">
+
+                        <!--Hover link-->
+                        <div class="hover-link">
+                            <a href="single-work.html">
+                                <i class="fa fa-link"></i>
+                            </a>
+
+                            <a href="{% static 'assets/images/works/img1.jpg' %}" class="popup-image">
+                                <i class="fa fa-plus"></i>
+                            </a>
+                        </div>
+                        <!--End link-->
+
+                        <!--Hover Caption-->
+                        <div class="work-caption">
+                            <h4>Project Title</h4>
+                            <p>Photography</p>
+                        </div>
+                        <!--End Caption-->
+
+                    </div> <!-- /.work-image-->
+                </li>
+                <!--End Work Item -->
+
+                <!-- Work Item -->
+                <li class="work-item thumnail-img mix corporate">
+                    <div class="work-image">
+                        <img src="images/works/img4.jpg" alt="thumbnail">
+
+                        <!--Hover link-->
+                        <div class="hover-link">
+                            <a href="single-work.html">
+                                <i class="fa fa-link"></i>
+                            </a>
+
+                            <a href="images/works/img4.jpg" class="popup-image">
+                                <i class="fa fa-plus"></i>
+                            </a>
+                        </div>
+                        <!--End link-->
+
+                        <!--Hover Caption-->
+                        <div class="work-caption">
+                            <h4>Project Title</h4>
+                            <p>Photography</p>
+                        </div>
+                        <!--End Caption-->
+
+                    </div> <!-- /.work-image-->
+                </li>
+                <!--End Work Item -->
+
+                <!-- Work Item -->
+                <li class="work-item thumnail-img mix fashion wedding">
+                    <div class="work-image">
+                        <img src="images/works/img5.jpg" alt="thumbnail">
+
+                        <!--Hover link-->
+                        <div class="hover-link">
+                            <a href="single-work.html">
+                                <i class="fa fa-link"></i>
+                            </a>
+
+                            <a href="images/works/img5.jpg" class="popup-image">
+                                <i class="fa fa-plus"></i>
+                            </a>
+                        </div>
+                        <!--End link-->
+
+                        <!--Hover Caption-->
+                        <div class="work-caption">
+                            <h4>Project Title</h4>
+                            <p>Photography</p>
+                        </div>
+                        <!--End Caption-->
+
+                    </div> <!-- /.work-image-->
+                </li>
+                <!--End Work Item -->
+
+                <!-- Work Item -->
+                <li class="work-item thumnail-img mix event wedding">
+                    <div class="work-image">
+                        <img src="images/works/img6.jpg" alt="thumbnail">
+
+                        <!--Hover link-->
+                        <div class="hover-link">
+                            <a href="single-work.html">
+                                <i class="fa fa-link"></i>
+                            </a>
+
+                            <a href="images/works/img6.jpg" class="popup-image">
+                                <i class="fa fa-plus"></i>
+                            </a>
+                        </div>
+                        <!--End link-->
+
+                        <!--Hover Caption-->
+                        <div class="work-caption">
+                            <h4>Project Title</h4>
+                            <p>Photography</p>
+                        </div>
+                        <!--End Caption-->
+
+                    </div> <!-- /.work-image-->
+                </li>
+                <!--End Work Item -->
+
+                <!-- Work Item -->
+                <li class="work-item thumnail-img mix event">
+                    <div class="work-image">
+                        <img src="images/works/img7.jpg" alt="thumbnail">
+
+                        <!--Hover link-->
+                        <div class="hover-link">
+                            <a href="single-work.html">
+                                <i class="fa fa-link"></i>
+                            </a>
+
+                            <a href="images/works/img7.jpg" class="popup-image">
+                                <i class="fa fa-plus"></i>
+                            </a>
+                        </div>
+                        <!--End link-->
+
+                        <!--Hover Caption-->
+                        <div class="work-caption">
+                            <h4>Project Title</h4>
+                            <p>Photography</p>
+                        </div>
+                        <!--End Caption-->
+
+                    </div> <!-- /.work-image-->
+                </li>
+                <!--End Work Item -->
+
+                <!-- Work Item -->
+                <li class="work-item thumnail-img mix corporate">
+                    <div class="work-image">
+                        <img src="images/works/img8.jpg" alt="thumbnail">
+
+                        <!--Hover link-->
+                        <div class="hover-link">
+                            <a href="single-work.html">
+                                <i class="fa fa-link"></i>
+                            </a>
+
+                            <a href="images/works/img8.jpg" class="popup-image">
+                                <i class="fa fa-plus"></i>
+                            </a>
+                        </div>
+                        <!--End link-->
+
+                        <!--Hover Caption-->
+                        <div class="work-caption">
+                            <h4>Project Title</h4>
+                            <p>Photography</p>
+                        </div>
+                        <!--End Caption-->
+
+                    </div> <!-- /.work-image-->
+                </li>
+                <!--End Work Item -->
+
+                <!-- Work Item -->
+                <li class="work-item thumnail-img mix event">
+                    <div class="work-image">
+                        <img src="images/works/img9.jpg" alt="thumbnail">
+
+                        <!--Hover link-->
+                        <div class="hover-link">
+                            <a href="single-work.html">
+                                <i class="fa fa-link"></i>
+                            </a>
+
+                            <a href="images/works/img9.jpg" class="popup-image">
+                                <i class="fa fa-plus"></i>
+                            </a>
+                        </div>
+                        <!--End link-->
+
+                        <!--Hover Caption-->
+                        <div class="work-caption">
+                            <h4>Project Title</h4>
+                            <p>Photography</p>
+                        </div>
+                        <!--End Caption-->
+
+                    </div> <!-- /.work-image-->
+                </li>
+                <!--End Work Item -->
+
+                <!-- Work Item -->
+                <li class="work-item thumnail-img mix wedding">
+                    <div class="work-image">
+                        <img src="images/works/img10.jpg" alt="thumbnail">
+
+                        <!--Hover link-->
+                        <div class="hover-link">
+                            <a href="single-work.html">
+                                <i class="fa fa-link"></i>
+                            </a>
+
+                            <a href="images/works/img10.jpg" class="popup-image">
+                                <i class="fa fa-plus"></i>
+                            </a>
+                        </div>
+                        <!--End link-->
+
+                        <!--Hover Caption-->
+                        <div class="work-caption">
+                            <h4>Project Title</h4>
+                            <p>Photography</p>
+                        </div>
+                        <!--End Caption-->
+
+                    </div> <!-- /.work-image-->
+                </li>
+                <!--End Work Item -->
+
+                <!-- Work Item -->
+                <li class="work-item thumnail-img mix fashion">
+                    <div class="work-image">
+                        <img src="images/works/img11.jpg" alt="thumbnail">
+
+                        <!--Hover link-->
+                        <div class="hover-link">
+                            <a href="single-work.html">
+                                <i class="fa fa-link"></i>
+                            </a>
+
+                            <a href="images/works/img11.jpg" class="popup-image">
+                                <i class="fa fa-plus"></i>
+                            </a>
+                        </div>
+                        <!--End link-->
+
+                        <!--Hover Caption-->
+                        <div class="work-caption">
+                            <h4>Project Title</h4>
+                            <p>Photography</p>
+                        </div>
+                        <!--End Caption-->
+
+                    </div> <!-- /.work-image-->
+                </li>
+                <!--End Work Item -->
+
+                <!-- Work Item -->
+                <li class="work-item thumnail-img mix corporate">
+                    <div class="work-image">
+                        <img src="images/works/img12.jpg" alt="thumbnail">
+
+                        <!--Hover link-->
+                        <div class="hover-link">
+                            <a href="single-work.html">
+                                <i class="fa fa-link"></i>
+                            </a>
+
+                            <a href="images/works/img12.jpg" class="popup-image">
+                                <i class="fa fa-plus"></i>
+                            </a>
+                        </div>
+                        <!--End link-->
+
+                        <!--Hover Caption-->
+                        <div class="work-caption">
+                            <h4>Project Title</h4>
+                            <p>Photography</p>
+                        </div>
+                        <!--End Caption-->
+
+                    </div> <!-- /.work-image-->
+                </li>
+                <!--End Work Item -->
+            </ul>
+
+        </div>
+    </section>
+    <!--End portfolio-->
+
+
+    <!--Start Services-->
+    <section id="services" class="section parallax" style="background: url({% static 'assets/images/parallax/services.jpg'  %}) no-repeat;">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+
+                <div class="title-box text-center white">
+                    <h2 class="title">Emeliyyatlar ve Proseduralar</h2>
+                </div>
+
+                <!--Services Item-->
+                {% if services  %}
+                {% for service in services%}
+                <div class="col-md-4">
+                    <div class="services-box">
+                        <div class="services-icon"> <i class="icon-basket"></i> </div>
+                        <div class="services-desc">
+                            <h4>{{service.title}}</h4>
+                            <a href="service/{{service.id}}">Daha Etrafli...</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                {% endif %}
+                <!--End services Item-->
+
+            </div>
+            <!--/.row-->
+        </div>
+        <!--/.container-->
+    </section>
+    <!--End Services-->
+
+
+    <!--Start Why Choose us-->
+    <section id="why-choose" class="section">
+        <div class="container">
+            <div class="row">
+
+                <div class="title-box text-center">
+                    <h2 class="title">Why Choose us</h2>
+                </div>
+
+                <!--start tabs-->
+                <div class="col-md-6">
+                    <div class="tabs tabs-main">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#one" data-toggle="tab">Klinikamiz</a></li>
+                            <li><a href="#two" data-toggle="tab">Urologiya</a></li>
+                            <li><a href="#three" data-toggle="tab">Support</a></li>
+                        </ul>
+                        <div class="tab-content">
+
+                            <!--Start Tab Item #1 -->
+                            <div class="tab-pane in active" id="one">
+                                <p>
+                                    National Prime Hospital tibbin ən son nailiyyətlərindən və dünya standartlarına cavab verən texnika və texnologiyalarından istifadə etməklə xalqımıza yüksək səviyyədə tibbi xidmət göstərməyi vəd edir. National Prime Hospital-ın missiyası beynəlxalq standartlara tam uyğun yüksək səviyyəli tibbi xidmət servisini təşkil etməkdən ibarətdir.
+                                </p>
+                            </div>
+                            <!-- End Tab -->
+
+                            <!--Start Tab Item #2 -->
+                            <div class="tab-pane" id="two">
+                                <p> 
+                                    Çoxşaxəli xəstəxananın və müasir avadanlıqların formatı bizə ən mürəkkəb uroloji problemləri, o cümlədən digər klinikalarda müalicə olunmayan problemləri həll etməyə imkan verir
+                                </p>
+                            </div>
+                            <!-- End Tab -->
+
+                            <!--Start Tab Item #3 -->
+                            <div class="tab-pane" id="three">
+                                <p>
+                                    Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt
+                                    laboredolore magna aliqua. Lorem ipsum dolor consectetur adipisicing incididunt
+                                    eiusmod tempor incididunt laboredolore magna aliqua.
+                                </p>
+                            </div>
+                            <!-- End Tab -->
+
+                        </div>
+                    </div>
+                </div>
+                <!-- End Tabs-->
+
+                <!--Start Accordion-->
+                <div class="col-md-6">
+                    <div class="panel-group accordion-main" id="accordion">
+                        <!--About accordion #1-->
+                        <div class="panel">
+                            <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion"
+                                data-target="#collapseOne">
+                                <h6 class="panel-title accordion-toggle">
+                                    Photography
+                                </h6>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non blandit nibh.
+                                        Sed eget tortor tincidunt, auctor sem eget, mollis nisi. Pellentesque ipsum
+                                        erat, facilisis ut venenatis eu, sodales vel dolor fusce diam ornare.
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--About accordion #2-->
+                        <div class="panel">
+                            <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion"
+                                data-target="#collapseTwo">
+                                <h6 class="panel-title accordion-toggle">
+                                    Web Designing
+                                </h6>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non blandit nibh.
+                                        Sed eget tortor tincidunt, auctor sem eget, mollis nisi. Pellentesque ipsum
+                                        erat, facilisis ut venenatis eu, sodales vel dolor fusce diam ornare.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--About accordion #3-->
+                        <div class="panel">
+                            <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion"
+                                data-target="#collapseThree">
+                                <h6 class="panel-title accordion-toggle">
+                                    Web Development
+                                </h6>
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non blandit nibh.
+                                        Sed eget tortor tincidunt, auctor sem eget, mollis nisi. Pellentesque ipsum
+                                        erat, facilisis ut venenatis eu, sodales vel dolor fusce diam ornare.
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--About accordion #4-->
+                        <div class="panel">
+                            <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion"
+                                data-target="#collapseFour">
+                                <h6 class="panel-title accordion-toggle">
+                                    Responsive Design
+                                </h6>
+                            </div>
+                            <div id="collapseFour" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non blandit nibh.
+                                        Sed eget tortor tincidunt, auctor sem eget, mollis nisi. Pellentesque ipsum
+                                        erat, facilisis ut venenatis eu, sodales vel dolor fusce diam ornare.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End Accordion-->
+
+            </div>
+            <!--/.row-->
+        </div>
+        <!--/.container-->
+    </section>
+    <!--End Why Choose us-->
+
+
+    <!--Start video 1-->
+    <section id="video" class="section parallax"
+        style="background:url({% static 'assets/images/parallax/pexels-pixabay-236380.jpg' %}) no-repeat;">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+
+                <div class="title-box text-center white">
+                    <h2 class="title">Videos From Opeartions</h2>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="play-video">
+                            <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/CRN_HU7llsK/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="13" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/CRN_HU7llsK/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;"> View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/CRN_HU7llsK/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Asif Cahangirov (@uzm.dr.asif_cahangirov)</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6">
+                    <div class="play-video">
+                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/CRge4fmBmXH/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="13" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/CRge4fmBmXH/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;"> View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/CRge4fmBmXH/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Asif Cahangirov (@uzm.dr.asif_cahangirov)</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>
+                    </div>
+                </div>
+
+            </div> <!-- /.row-->
+        </div> <!-- /.container-->
+    </section>
+    <!--End video-->
+    <!--Start video 2-->
+    <section id="video" class="section parallax"
+        style="background:url({% static 'assets/images/parallax/pexels-pixabay-236380.jpg' %}) no-repeat;">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6">
+                    <div class="play-video">
+                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/CPc3ZoNBeRi/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="13" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/CPc3ZoNBeRi/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;"> View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/CPc3ZoNBeRi/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Asif Cahangirov (@uzm.dr.asif_cahangirov)</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="play-video">
+                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/CPKh25UBJq0/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="13" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/CPKh25UBJq0/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;"> View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/CPKh25UBJq0/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Asif Cahangirov (@uzm.dr.asif_cahangirov)</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>
+                    </div>
+                </div>
+
+
+            </div> <!-- /.row-->
+        </div> <!-- /.container-->
+    </section>
+    <!--End video-->
+    <!--Start video 3-->
+    <section id="video" class="section parallax"
+        style="background:url({% static 'assets/images/parallax/pexels-pixabay-236380.jpg' %}) no-repeat;">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6">
+                    <div class="play-video">
+                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/COSRr92Bjlz/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="13" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/COSRr92Bjlz/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;"> View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/COSRr92Bjlz/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Asif Cahangirov (@uzm.dr.asif_cahangirov)</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="play-video">
+                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/CNaNjKIhzju/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="13" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/CNaNjKIhzju/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;"> View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/CNaNjKIhzju/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Asif Cahangirov (@uzm.dr.asif_cahangirov)</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>
+                    </div>
+                </div>
+
+            </div> <!-- /.row-->
+        </div> <!-- /.container-->
+    </section>
+    <!--End video-->
+
+
+    <!-- Start blog-->
+    <section id="blog" class="section">
+        <div class="container">
+            <div class="row">
+
+                <div class="title-box text-center">
+                    <h2 class="title">Latest Blog</h2>
+                </div>
+
+                <!-- Start Blog item -->
+                {% if posts %}
+                {% for post in posts %}
+                <div class="col-md-4">
+                    <div class="blog-post">
+                        <div class="post-media">
+                            <img src="images/blog/blog1.jpg" alt="">
+                        </div>
+                        
+                        <div class="post-desc">
+                            <h4>{{post.title}}</h4>
+                            <h5>{{post.date}}</h5>
+                            <p>{{post.body | truncatewords:20}}</p>
+                            <a href="post/{{post.id}}" class="btn btn-gray-border">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                {% endif %} 
+                
+            </div>
+            <!--/.row-->
+        </div>
+        <!--/.container-->
+    </section>
+    <!-- End blog-->
+
+
+
+
+    <!--Start Contact-->
+    <section id="contact" class="section parallax"
+        style="background: url({% static 'assets/images/parallax/prime.jpg'  %}) no-repeat;">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">   
+                
+                <div class="title-box text-center white">
+                    <h2 class="title">Contact</h2>
+                </div>
+            </div>
+
+            <!--Start contact form-->
+            <div class="col-md-8 col-md-offset-2 contact-form">
+
+                <div class="contact-info text-center">
+                    <p>+994 50 802 05 07</p>
+                    <p>Bakı, Ə. Rəcəbli 3, bina 30</p>
+                    <p>dr.cahangirov@gmail.com </p>
+                </div>
+
+                <form method="POST">
+                    {% csrf_token %}
+                   <p style="color: red">{{contact_error}}</p>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <input class="form-control" id="name" placeholder="Full Name" type="text" style="color: #ccc;font-weight: 700;">
+                        </div>
+                        <div class="col-md-4">
+                            <input class="form-control" id="email" placeholder="Your Email" type="email" name='email' style="color: #ccc;font-weight: 700;">
+                        </div>
+                        <div class="col-md-4">
+                            <input class="form-control" id="subject" placeholder="Subject" type="text" name="subject" style="color: #ccc;font-weight: 700;">
+                        </div>
+                        <div class="col-md-12">
+                            <textarea class="form-control" id="message" rows="7" placeholder="Your Message" name="message" style="color: #ccc;font-weight: 700;"></textarea>
+                        </div>
+                        <div class="col-md-12 text-right">
+                            <button type="submit" class="btn btn-green">SEND MESSAGE</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!--End contact form-->
+
+        </div> <!-- /.container-->
+    </section>
+    <!--End Contact-->
+
+
+    <!--Start Footer-->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <!--Start copyright-->
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <div class="copyright">
+                        <p>Copyright © 2016 All Rights reserved by Ferhad Cahangirov : <a href="http://templatestock.co">Template Stock</a>
+                        </p>
+                    </div>
+                </div>
+                <!--End copyright-->
+
+                <!--start social icons-->
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <div class="social-icons">
+                        <ul>
+                            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--End social icons-->
+            </div> <!-- /.row-->
+        </div> <!-- /.container-->
+    </footer>
+    <!--End Footer-->
+
+    <a href="#" class="scrollup"> <i class="fa fa-chevron-up"> </i> </a>
+
+    <!--Plugins-->
+    <script type="text/javascript" src="{% static 'assets/js/jquery-1.11.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/owl-carousel/owl.carousel.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/jquery.flexslider-min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/jquery.magnific-popup.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/easing.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/jquery.easypiechart.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/jquery.appear.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/jquery.parallax-1.1.3.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/jquery.mixitup.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/custom.js' %}"></script>
+
+</body>
+
+</html>
